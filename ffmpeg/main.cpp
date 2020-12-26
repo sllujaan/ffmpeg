@@ -1,31 +1,25 @@
-#pragma once
 #include<iostream>
-#include<windows.h>
-#include"DllLoader.h"
+#include"Muxing.h"
 
-using namespace std;
-
-
-typedef const char*(*MYPROC)(enum AVCodecID);
-typedef void(*funPtr)(const char*);
+extern "C" {
+#include<libavcodec/codec.h>
+}
 
 
 
+int main(int argc, char** argv) {
+
+	char* ptr = nullptr;
+	char abc[2];
+	ptr = abc;
 
 
-int main() {
+	initMuxing(argc, argv);
 
-	cout << avcodec_get_name(AV_CODEC_ID_PNG) << endl;
-
-	/*MYPROC* _funPtr1 = nullptr;
-	FFmpegDllLoader ffmpegDll;
-	ffmpegDll.loadDllFunc<MYPROC>(&_funPtr1, "avcodec_get_name", AVCODEC_DLL);
-
-	if((_funPtr1)) cout << (*_funPtr1)(AV_CODEC_ID_PNG) << endl;*/
+	//std::cout << avcodec_get_name(AV_CODEC_ID_PNG) << std::endl;
 
 
-
-	cin.get();
+	std::cin.get();
 
 	return 0;
 }
