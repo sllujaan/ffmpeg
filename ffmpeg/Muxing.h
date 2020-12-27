@@ -710,5 +710,6 @@ int initMuxing(int argc, char** argv) {
 
 
     std::cout << std::endl << "muxing succeeded" << std::endl;
+    
 	return 0;
 }

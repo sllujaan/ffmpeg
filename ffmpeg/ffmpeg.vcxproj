@@ -156,6 +156,7 @@
     <ClCompile Include="Muxing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Demuxing.h" />
     <ClInclude Include="DllLoader.h" />
     <ClInclude Include="Muxing.h" />
   </ItemGroup>
